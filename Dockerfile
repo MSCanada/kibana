@@ -22,7 +22,7 @@ COPY bin/kibana-docker /usr/local/bin/
 
 # Add a self-signed SSL certificate for use in examples.
 COPY ssl/kibana.example.org.* /usr/share/kibana/config/
-
+RUN chmod -R 0777 /usr/share/kibana
 
 
 CMD ["/bin/bash", "/usr/local/bin/kibana-docker"]
